@@ -25,7 +25,7 @@
     <string name="bp_value">120/80mmHg</string>
     <string name="search">Search</string>
     <string name="it_seems_you_do_not_have_any_record">It seems you do not have any record.</string>
-    <string name="to_begin_click_the_add_button_to_add_a_patient_s_record">To begin, click the Add button to add a patient\'s record</string>
+    <string name="to_begin_click_the_add_button_to_add_a_patient_s_record">To begin, click the Create button to add a patient\'s record</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="to_begin_create_an_administrator_account">To begin, create an Administrator Account</string>
