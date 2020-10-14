@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#cccccc</color>
-    <color name="colorPrimaryDark">#cccccc</color>
-    <color name="colorAccent">#37474f</color>
     <color name="fabBackground">#37474f</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#37474f</color>
+    <color name="colorAccent">#979797</color>
 </resources>
