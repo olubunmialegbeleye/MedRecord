@@ -20,9 +20,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class NavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private RecyclerView mRecyclerView;
+    /*private RecyclerView mRecyclerView;
     private WordListAdapter mAdapter;
-    private final LinkedList<String> mWordList = new LinkedList<>();
+    private final LinkedList<String> mWordList = new LinkedList<>();*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

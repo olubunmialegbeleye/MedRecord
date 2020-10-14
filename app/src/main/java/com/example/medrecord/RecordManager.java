@@ -18,9 +18,9 @@ import android.view.View;
 import java.util.LinkedList;
 
 public class RecordManager extends AppCompatActivity {
-    private RecyclerView mRecyclerView;
+    /*private RecyclerView mRecyclerView;
     private WordListAdapter mAdapter;
-    private final LinkedList<String> mWordList = new LinkedList<>();
+    private final LinkedList<String> mWordList = new LinkedList<>();*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +37,13 @@ public class RecordManager extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
-        for (int i = 0; i < 20; i++) {
+        /*for (int i = 0; i < 20; i++) {
             mWordList.addLast("John Doe " + i);
         }
         mRecyclerView = findViewById(R.id.recycler_view);
         mAdapter = new WordListAdapter(this, mWordList);
         mRecyclerView.setAdapter(mAdapter);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));*/
     }
 
     @Override
