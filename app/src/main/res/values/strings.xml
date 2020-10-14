@@ -1,5 +1,36 @@
 <resources>
     <string name="app_name">MedRecord</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">MedRecord</string>
+    <string name="extended_fab_content_description">Extended Fab Content Description</string>
+    <string name="create">CREATE</string>
+    <string name="title_activity_record_manager">Patients</string>
+    <string name="fab_content_description">Fab Content Description</string>
+    <string name="title_activity_navigation">Patients</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="john_doe">John Doe</string>
+    <string name="age">Age:</string>
+    <string name="age_value">50</string>
+    <string name="sex">`Sex:</string>
+    <string name="sex_value">M</string>
+    <string name="bp">`BP:</string>
+    <string name="bp_value">120/80mmHg</string>
+    <string name="search">Search</string>
+    <string name="it_seems_you_do_not_have_any_record">It seems you do not have any record.</string>
+    <string name="to_begin_click_the_add_button_to_add_a_patient_s_record">To begin, click the Add button to add a patient\'s record</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="to_begin_create_an_administrator_account">To begin, create an Administrator Account</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
 
 </resources>
