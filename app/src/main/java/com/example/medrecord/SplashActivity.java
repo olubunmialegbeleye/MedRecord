@@ -21,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 SharedPreferences sp = getSharedPreferences("login", MODE_PRIVATE);
                 if(sp.contains("username") && sp.contains("password")){
-                    startActivity(new Intent(SplashActivity.this, MainActivity.SignInActivity.class));
+                    startActivity(new Intent(SplashActivity.this, SignInActivity.class));
                 }
                 else{
                     startActivity(new Intent(SplashActivity.this, SignUpActivity.class));

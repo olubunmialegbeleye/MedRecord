@@ -19,7 +19,7 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         final SharedPreferences login = getSharedPreferences("login", MODE_PRIVATE);
         createAccount = (Button) findViewById(R.id.buttonCreateAccount);
-        username = (EditText) findViewById(R.id.editTextPassword);
+        username = (EditText) findViewById(R.id.editTextUsername);
         password = (EditText) findViewById(R.id.editTextConfirmPassword);
         confirmPassword = (EditText) findViewById(R.id.editTextConfirmPassword);
         createAccount.setOnClickListener(new View.OnClickListener() {

@@ -22,9 +22,9 @@ public class SignInActivity extends AppCompatActivity {
         SharedPreferences login = getSharedPreferences("login", MODE_PRIVATE);
         usernameTRUE = login.getString("username", null);
         passwordTRUE = login.getString("password", null);
-        signIn = (Button) findViewById(R.id.buttonCreateAccount);
-        username = (EditText) findViewById(R.id.editTextPassword);
-        password = (EditText) findViewById(R.id.editTextConfirmPassword);
+        signIn = (Button) findViewById(R.id.buttonSignIn);
+        username = (EditText) findViewById(R.id.editTextUsername);
+        password = (EditText) findViewById(R.id.editTextPassword);
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

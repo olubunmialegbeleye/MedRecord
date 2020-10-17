@@ -13,7 +13,7 @@
             android:name=".SignUpActivity"
             android:label="@string/sign_up"></activity>
         <activity
-            android:name=".MainActivity$SignInActivity"
+            android:name=".SignInActivity"
             android:label="@string/sign_in"></activity>
         <activity
             android:name=".SplashActivity"
