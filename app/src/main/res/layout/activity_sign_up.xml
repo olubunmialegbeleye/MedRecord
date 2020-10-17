@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextUsername"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -50,11 +50,11 @@
         android:layout_marginTop="32dp"
         android:text="@string/password"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintStart_toStartOf="@+id/editTextUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/editTextPassword"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -74,11 +74,11 @@
         android:layout_marginTop="32dp"
         android:text="@string/confirm_password"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/editTextConfirmPassword"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -101,5 +101,5 @@
         android:text="CREATE ACCOUNT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
