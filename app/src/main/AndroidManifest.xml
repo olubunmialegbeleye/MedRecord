@@ -10,11 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".NewRecordActivity"
+            android:label="@string/new_record"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".SignUpActivity"
-            android:label="@string/sign_up"></activity>
+            android:label="@string/sign_up" />
         <activity
             android:name=".SignInActivity"
-            android:label="@string/sign_in"></activity>
+            android:label="@string/sign_in" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
