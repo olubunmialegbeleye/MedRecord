@@ -21,7 +21,7 @@
             app:srcCompat="@drawable/tie_man" />
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/patientName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -40,17 +40,17 @@
             android:text="@string/age"
             android:textAlignment="textStart"
             android:textSize="@dimen/record_text_size"
-            app:layout_constraintStart_toStartOf="@+id/name"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintStart_toStartOf="@+id/patientName"
+            app:layout_constraintTop_toBottomOf="@+id/patientName" />
 
         <TextView
             android:id="@+id/age_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/age_value"
+            android:text="placeHolder"
             android:textSize="@dimen/record_text_size"
             app:layout_constraintStart_toEndOf="@+id/age"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintTop_toBottomOf="@+id/patientName" />
 
         <TextView
             android:id="@+id/sex"
@@ -60,16 +60,16 @@
             android:text="@string/sex"
             android:textSize="@dimen/record_text_size"
             app:layout_constraintStart_toEndOf="@+id/age_value"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintTop_toBottomOf="@+id/patientName" />
 
         <TextView
             android:id="@+id/sex_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sex_value"
+            android:text="placeHolder"
             android:textSize="@dimen/record_text_size"
             app:layout_constraintStart_toEndOf="@+id/sex"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintTop_toBottomOf="@+id/patientName" />
 
         <TextView
             android:id="@+id/bp"
@@ -79,16 +79,16 @@
             android:text="@string/bp"
             android:textSize="@dimen/record_text_size"
             app:layout_constraintStart_toEndOf="@+id/sex_value"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintTop_toBottomOf="@+id/patientName" />
 
         <TextView
             android:id="@+id/bp_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/bp_value"
+            android:text="placeHolder"
             android:textSize="@dimen/record_text_size"
             app:layout_constraintStart_toEndOf="@+id/bp"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintTop_toBottomOf="@+id/patientName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

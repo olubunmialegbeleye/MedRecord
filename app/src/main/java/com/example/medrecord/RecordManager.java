@@ -1,11 +1,10 @@
 package com.example.medrecord;
 
+import android.os.Build;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class RecordManager extends AppCompatActivity {
-    /*private RecyclerView mRecyclerView;
-    private WordListAdapter mAdapter;
-    private final LinkedList<String> mWordList = new LinkedList<>();*/
+    private final LinkedList<String> mWordList = new LinkedList<>();
+    DBHelper dbHelper = new DBHelper(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +36,8 @@ public class RecordManager extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
-        /*for (int i = 0; i < 20; i++) {
-            mWordList.addLast("John Doe " + i);
-        }
-        mRecyclerView = findViewById(R.id.recycler_view);
-        mAdapter = new WordListAdapter(this, mWordList);
-        mRecyclerView.setAdapter(mAdapter);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));*/
+        dbHelper.open();
+        //String data = dbHelper.getPatientNameList(); to return a list of patient names that will be used to construct the listview
     }
 
     @Override
@@ -59,5 +53,15 @@ public class RecordManager extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void initializeRecyclerView(){
+        RecyclerView recyclerPatientList = (RecyclerView) findViewById(R.id.recycler_view);
+        LinearLayoutManager listLayoutManager = new LinearLayoutManager(this);
+        recyclerPatientList.setLayoutManager(listLayoutManager);
+
+        List<Patient> patientList =dbHelper.getPatientList(); //from database
+        final PatientListRecyclerAdapter patientListRecyclerAdapter = new PatientListRecyclerAdapter(this, patientList);
+        recyclerPatientList.setAdapter(patientListRecyclerAdapter);
     }
 }
