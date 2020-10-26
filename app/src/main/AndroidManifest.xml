@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.medrecord">
+    package="com.example.medrecord" >
 
     <application
         android:allowBackup="true"
@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditRecordActivity"></activity>
+        <activity android:name=".EditRecordActivity"
+        android:theme="@style/AppTheme" ></activity>
+        <activity
+            android:name=".ViewRecordActivity"
+            android:label="@string/view_patient_record" />
         <activity
             android:name=".NewRecordActivity"
             android:label="@string/new_record"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SignUpActivity"
             android:label="@string/sign_up" />
@@ -22,7 +26,7 @@
             android:label="@string/sign_in" />
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

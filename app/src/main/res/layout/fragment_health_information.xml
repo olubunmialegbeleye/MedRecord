@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthInformationFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/health_info_health_info_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/health_information"
+        android:textSize="@dimen/twenty_five_sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/health_info_blood_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/blood_group"
+        android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
+        app:layout_constraintStart_toStartOf="@+id/health_info_health_info_id"
+        app:layout_constraintTop_toBottomOf="@+id/health_info_health_info_id" />
+
+    <Spinner
+        android:id="@+id/health_info_blood_group_spinner"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintStart_toEndOf="@+id/health_info_blood_group"
+        app:layout_constraintTop_toBottomOf="@+id/health_info_health_info_id" />
+
+    <TextView
+        android:id="@+id/health_info_genotype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/genotype"
+        android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
+        app:layout_constraintStart_toEndOf="@+id/health_info_blood_group_spinner"
+        app:layout_constraintTop_toTopOf="@+id/health_info_blood_group" />
+
+    <Spinner
+        android:id="@+id/health_info_genotype_spinner"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/health_info_genotype"
+        app:layout_constraintTop_toTopOf="@+id/health_info_blood_group_spinner" />
+
+    <TextView
+        android:id="@+id/health_info_bp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/blood_pressure"
+        android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
+        app:layout_constraintStart_toStartOf="@+id/health_info_blood_group"
+        app:layout_constraintTop_toBottomOf="@+id/health_info_blood_group" />
+
+    <EditText
+        android:id="@+id/health_info_bp_1"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/health_info_bp"
+        app:layout_constraintTop_toBottomOf="@+id/health_info_blood_group" />
+
+    <TextView
+        android:id="@+id/health_info_bp_slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/forward_slash"
+        android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
+        app:layout_constraintStart_toEndOf="@+id/health_info_bp_1"
+        app:layout_constraintTop_toTopOf="@+id/health_info_bp" />
+
+    <EditText
+        android:id="@+id/health_info_bp_2"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/health_info_bp_slash"
+        app:layout_constraintTop_toTopOf="@+id/health_info_bp_1" />
+
+    <TextView
+        android:id="@+id/health_info_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/weight"
+        android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
+        app:layout_constraintStart_toStartOf="@+id/health_info_bp"
+        app:layout_constraintTop_toBottomOf="@+id/health_info_bp" />
+
+    <EditText
+        android:id="@+id/health_info_weight_edit"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/health_info_weight"
+        app:layout_constraintTop_toBottomOf="@+id/health_info_bp" />
+
+    <TextView
+        android:id="@+id/health_info_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/height"
+        android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
+        app:layout_constraintStart_toEndOf="@+id/health_info_weight_edit"
+        app:layout_constraintTop_toTopOf="@+id/health_info_weight" />
+
+    <EditText
+        android:id="@+id/health_info_height_edit"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/health_info_height"
+        app:layout_constraintTop_toTopOf="@+id/health_info_weight_edit" />
+
+    <Button
+        android:id="@+id/health_info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/health_info_height" />
+
+    <TextView
+        android:id="@+id/health_info_kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kg"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/health_info_weight_edit"
+        app:layout_constraintEnd_toEndOf="@+id/health_info_weight_edit"
+        app:layout_constraintTop_toTopOf="@+id/health_info_weight_edit" />
+
+    <TextView
+        android:id="@+id/health_info_cm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cm"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/health_info_height_edit"
+        app:layout_constraintEnd_toEndOf="@+id/health_info_height_edit"
+        app:layout_constraintTop_toTopOf="@+id/health_info_height_edit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewRecordActivity">
+
+  <TextView
+      android:id="@+id/view_john_doe"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="24dp"
+      android:text="@string/john_doe"
+      android:textSize="@dimen/twenty_five_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/view_personal_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:text="@string/personal_information"
+      android:textSize="@dimen/twenty_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/view_john_doe"
+      app:layout_constraintTop_toBottomOf="@+id/view_john_doe" />
+
+  <TextView
+      android:id="@+id/view_dob"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="24dp"
+      android:text="@string/date_of_birth"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/view_personal_info" />
+
+  <TextView
+      android:id="@+id/view_occupation"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="50dp"
+      android:text="@string/occupation"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toEndOf="@+id/view_dob"
+      app:layout_constraintTop_toTopOf="@+id/view_dob" />
+
+  <TextView
+      android:id="@+id/view_dd_mm_yyyy"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/birth_date_dd_mm_yyyy"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_dob"
+      app:layout_constraintTop_toBottomOf="@+id/view_dob" />
+
+  <TextView
+      android:id="@+id/view_fisherman"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/fisherman"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_occupation"
+      app:layout_constraintTop_toBottomOf="@+id/view_occupation" />
+
+  <TextView
+      android:id="@+id/view_gender"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="@string/gender"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/view_dob"
+      app:layout_constraintTop_toBottomOf="@+id/view_dd_mm_yyyy" />
+
+  <TextView
+      android:id="@+id/view_marital_status"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/marital_status"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/view_occupation"
+      app:layout_constraintTop_toTopOf="@+id/view_gender" />
+
+  <TextView
+      android:id="@+id/view_male"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/male"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_gender"
+      app:layout_constraintTop_toBottomOf="@+id/view_gender" />
+
+  <TextView
+      android:id="@+id/view_married"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/married"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_marital_status"
+      app:layout_constraintTop_toBottomOf="@+id/view_marital_status" />
+
+  <View
+      android:id="@+id/view_view_id"
+      android:layout_width="0dp"
+      android:layout_height="5dp"
+      android:layout_marginTop="16dp"
+      android:background="@color/colorAccent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/view_married" />
+
+  <TextView
+      android:id="@+id/view_contact_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:text="@string/contact_information"
+      android:textSize="@dimen/twenty_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/view_personal_info"
+      app:layout_constraintTop_toBottomOf="@+id/view_view_id" />
+
+  <TextView
+      android:id="@+id/view_phone"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="24dp"
+      android:text="@string/phone"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/view_contact_info" />
+
+  <TextView
+      android:id="@+id/view_email_address"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/email_address"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/view_occupation"
+      app:layout_constraintTop_toTopOf="@+id/view_phone" />
+
+  <TextView
+      android:id="@+id/view_telephone_number"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/telephone_number"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_phone"
+      app:layout_constraintTop_toBottomOf="@+id/view_phone" />
+
+  <TextView
+      android:id="@+id/view_com_email_address"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/com_email_address"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_email_address"
+      app:layout_constraintTop_toBottomOf="@+id/view_email_address" />
+
+  <TextView
+      android:id="@+id/view_address"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="@string/address"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/view_telephone_number"
+      app:layout_constraintTop_toBottomOf="@+id/view_telephone_number" />
+
+  <TextView
+      android:id="@+id/view_house_address"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/house_address"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_address"
+      app:layout_constraintTop_toBottomOf="@+id/view_address" />
+
+  <TextView
+      android:id="@+id/view_city"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="@string/city"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/view_house_address"
+      app:layout_constraintTop_toBottomOf="@+id/view_house_address" />
+
+  <TextView
+      android:id="@+id/view_ibadan_city"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/ibadan_city"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_city"
+      app:layout_constraintTop_toBottomOf="@+id/view_city" />
+
+  <TextView
+      android:id="@+id/view_state"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/state"
+      android:textSize="@dimen/eighteen_sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@+id/view_email_address"
+      app:layout_constraintTop_toTopOf="@+id/view_city" />
+
+  <TextView
+      android:id="@+id/view_lagos_state"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/lagos_state"
+      android:textSize="@dimen/sixteen_sp"
+      app:layout_constraintStart_toStartOf="@+id/view_state"
+      app:layout_constraintTop_toBottomOf="@+id/view_state" />
+</androidx.constraintlayout.widget.ConstraintLayout>
