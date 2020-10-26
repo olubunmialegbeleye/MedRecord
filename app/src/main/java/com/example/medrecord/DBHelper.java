@@ -42,8 +42,8 @@ public class DBHelper {
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-            db.execSQL("CREATE TABLE " + TABLE_NAME + " (" +
-                    COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            db.execSQL("CREATE TABLE " + TABLE_NAME + " ( " +
+                    //COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_NAME + " TEXT NOT NULL, " +
                     COLUMN_DOB + " DATE NOT NULL, " +
                     COLUMN_GENDER + " TEXT NOT NULL, " +
@@ -53,7 +53,7 @@ public class DBHelper {
                     COLUMN_PHONE + " TEXT NOT NULL, " +
                     COLUMN_CITY + " TEXT NOT NULL, " +
                     COLUMN_STATE + " TEXT NOT NULL, " +
-                    COLUMN_EMAIL + " TEXT NOT NULL " +
+                    COLUMN_EMAIL + " TEXT NOT NULL PRIMARY KEY " +
                     " )"
             );
         }
@@ -78,23 +78,27 @@ public class DBHelper {
     }
     public long createPatient(Patient patient){
         ContentValues cv = new ContentValues();
-        cv.put("COLUMN_NAME", patient.PATIENT_NAME);
-        cv.put("COLUMN_DOB", patient.PATIENT_DOB.toString());
-        cv.put("COLUMN_GENDER", patient.PATIENT_GENDER);
-        cv.put("COLUMN_OCCUPATION", patient.PATIENT_OCCUPATION);
-        cv.put("COLUMN_MARITAL_STATUS", patient.PATIENT_MARITAL_STATUS);
-        cv.put("COLUMN_ADDRESS", patient.PATIENT_ADDRESS);
-        cv.put("COLUMN_PHONE", patient.PATIENT_PHONE);
-        cv.put("COLUMN_CITY", patient.PATIENT_CITY);
-        cv.put("COLUMN_STATE", patient.PATIENT_STATE);
-        cv.put("COLUMN_EMAIL", patient.PATIENT_EMAIL);
-        return db.insert(TABLE_NAME, null, cv);
+        cv.put(COLUMN_NAME, patient.PATIENT_NAME);
+        cv.put(COLUMN_DOB, patient.PATIENT_DOB.toString());
+        cv.put(COLUMN_GENDER, patient.PATIENT_GENDER);
+        cv.put(COLUMN_OCCUPATION, patient.PATIENT_OCCUPATION);
+        cv.put(COLUMN_MARITAL_STATUS, patient.PATIENT_MARITAL_STATUS);
+        cv.put(COLUMN_ADDRESS, patient.PATIENT_ADDRESS);
+        cv.put(COLUMN_PHONE, patient.PATIENT_PHONE);
+        cv.put(COLUMN_CITY, patient.PATIENT_CITY);
+        cv.put(COLUMN_STATE, patient.PATIENT_STATE);
+        cv.put(COLUMN_EMAIL, patient.PATIENT_EMAIL);
+        this.open();
+        long result_code = db.insert(TABLE_NAME, null, cv);
+        this.close();
+        return result_code;
     }
     @RequiresApi(api = Build.VERSION_CODES.O)
     public List<Patient> getPatientList(){
         List<Patient> patientList = new ArrayList<>();
         String[] columns = new String[] {COLUMN_NAME, COLUMN_DOB, COLUMN_GENDER, COLUMN_OCCUPATION, COLUMN_MARITAL_STATUS, COLUMN_ADDRESS, COLUMN_PHONE, COLUMN_CITY, COLUMN_STATE, COLUMN_EMAIL};
-        Cursor c = db.query(TABLE_NAME, null, null, null, null, null, null);
+        this.open();
+        Cursor c = db.query(TABLE_NAME, columns, null, null, null, null, null);
         int iName = c.getColumnIndex(COLUMN_NAME);
         int iDOB = c.getColumnIndex(COLUMN_DOB);
         int iGender = c.getColumnIndex(COLUMN_GENDER);
@@ -119,13 +123,16 @@ public class DBHelper {
             Patient patient = new Patient(pName, pOccupation, pPhone, pAddress, pCity, pState, pEmail, pDOB, pGender, pMaritalStatus);
             patientList.add(patient);
         }
+        this.close();
         return patientList;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Patient getPatient(String patientName){
         String[] columns = new String[] {COLUMN_NAME, COLUMN_DOB, COLUMN_GENDER, COLUMN_OCCUPATION, COLUMN_MARITAL_STATUS, COLUMN_ADDRESS, COLUMN_PHONE, COLUMN_CITY, COLUMN_STATE, COLUMN_EMAIL};
+        this.open();
         Cursor c = db.query(TABLE_NAME, null, COLUMN_NAME + " = " + patientName, null, null, null, null);
+        this.close();
         int iName = c.getColumnIndex(COLUMN_NAME);
         int iDOB = c.getColumnIndex(COLUMN_DOB);
         int iGender = c.getColumnIndex(COLUMN_GENDER);
@@ -156,8 +163,13 @@ public class DBHelper {
     }
 
 
-    public int deletePatient(String patientName){
-        return db.delete(TABLE_NAME,COLUMN_NAME + " = " + patientName, null);
+    public int deletePatient(String[] patientNames){
+        //look for a way to
+        String pName = "";
+        for(String s : patientNames){
+
+        }
+        return db.delete(TABLE_NAME,COLUMN_NAME + " IN " + " ? ", patientNames);
     }
 
     public int editPatient(String patientName, Patient updatedPatient){
@@ -172,6 +184,9 @@ public class DBHelper {
         cv.put("COLUMN_CITY", updatedPatient.PATIENT_CITY);
         cv.put("COLUMN_STATE", updatedPatient.PATIENT_STATE);
         cv.put("COLUMN_EMAIL", updatedPatient.PATIENT_EMAIL);
-        return db.update(TABLE_NAME, cv, COLUMN_NAME + " = " + patientName, null);
+        this.open();
+        int result_code = db.update(TABLE_NAME, cv, COLUMN_NAME + " = " + patientName, null);
+        this.close();
+        return result_code;
     }
 }

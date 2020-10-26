@@ -4,6 +4,7 @@
 
     <solid
         android:color="@android:color/darker_gray">
+        <!---->
     </solid>
 
     <corners
