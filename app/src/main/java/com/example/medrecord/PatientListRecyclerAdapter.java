@@ -38,6 +38,7 @@ public class PatientListRecyclerAdapter extends RecyclerView.Adapter<PatientList
         holder.textName.setText(patient.getPatientName());
         holder.textAge.setText(patient.getPatientAge() + "");
         holder.textGender.setText(patient.getPatientGender());
+        holder.currentPosition = position;
     }
 
     @Override
@@ -49,12 +50,20 @@ public class PatientListRecyclerAdapter extends RecyclerView.Adapter<PatientList
         TextView textName;
         TextView textAge;
         TextView textGender;
-
+        int currentPosition;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textName = (TextView) itemView.findViewById(R.id.patientName);
             textAge = (TextView) itemView.findViewById(R.id.age_value);
             textGender = (TextView) itemView.findViewById(R.id.sex_value);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    /*
+                    Intent patientDetailIntent = new Intent(context, PatientDetailsIntent);
+                     */
+                }
+            });
         }
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity$SignInActivity">
+    tools:context=".EmptyRecordActivity$SignInActivity">
 
 
     <TextView
@@ -61,7 +61,7 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        style="@style/AppTheme.RoundedCornerMaterialButton"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -102,7 +102,7 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        style="@style/AppTheme.RoundedCornerMaterialButton"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -160,7 +160,7 @@
 
     <EditText
         android:id="@+id/editTextDate2"
-        style="@style/AppTheme.RoundedCornerMaterialButton"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"

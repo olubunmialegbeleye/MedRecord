@@ -24,9 +24,9 @@ tools:context=".NewRecordActivity">
 
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout_id"
+        android:id="@+id/parentTabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="0dp"
         android:layout_marginTop="500dp"
         app:tabBackground="@drawable/tab_selector"
@@ -52,6 +52,7 @@ tools:context=".NewRecordActivity">
 <androidx.viewpager.widget.ViewPager
     android:id="@+id/viewpager_id"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="0dp"
+    />
 
 </LinearLayout>

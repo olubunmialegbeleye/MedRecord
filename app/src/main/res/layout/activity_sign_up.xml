@@ -30,7 +30,7 @@
 
     <EditText
         android:id="@+id/editTextUsername"
-        style="@style/AppTheme.RoundedCornerMaterialButton"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
@@ -55,7 +55,7 @@
 
     <EditText
         android:id="@+id/editTextPassword"
-        style="@style/AppTheme.RoundedCornerMaterialButton"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
@@ -79,7 +79,7 @@
 
     <EditText
         android:id="@+id/editTextConfirmPassword"
-        style="@style/AppTheme.RoundedCornerMaterialButton"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
