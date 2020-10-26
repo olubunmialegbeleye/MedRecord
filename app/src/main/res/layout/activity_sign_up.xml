@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="@string/to_begin_create_an_administrator_account"
-        android:textSize="20sp"
+        android:textSize="@dimen/twenty_sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +25,7 @@
         android:layout_marginTop="40dp"
         android:text="@string/username"
         android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -50,6 +51,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/password"
         android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
         app:layout_constraintStart_toStartOf="@+id/editTextUsername"
         app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
 
@@ -74,6 +76,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/confirm_password"
         android:textStyle="bold"
+        android:textSize="@dimen/eighteen_sp"
         app:layout_constraintStart_toStartOf="@+id/editTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 

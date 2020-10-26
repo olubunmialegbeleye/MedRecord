@@ -47,5 +47,31 @@
     <string name="gender">Gender</string>
     <string name="occupation">Occupation</string>
     <string name="marital_status">Marital Status</string>
+    <string name="health_information">Health Information</string>
+    <string name="blood_group">Blood Group:</string>
+    <string name="genotype">Genotype:</string>
+    <string name="blood_pressure">Blood Pressure:</string>
+    <string name="forward_slash">/</string>
+    <string name="weight">Weight:</string>
+    <string name="height">Height:</string>
+    <string name="view_patient_record">View Patient Record</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="email_address">Email Address</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="single">Single</string>
+    <string name="married">Married</string>
+    <string name="divorced">Divorced</string>
+    <string name="birth_date_dd_mm_yyyy">99/99/9999</string>
+    <string name="fisherman">Fisherman</string>
+    <string name="telephone_number">99999999999</string>
+    <string name="com_email_address">johndoejohndoe@gmail.com</string>
+    <string name="house_address">23, Federal Teaching Hospital road, Apata</string>
+    <string name="ibadan_city">Ibadan</string>
+    <string name="lagos_state">Lagos</string>
 
 </resources>
