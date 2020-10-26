@@ -5,9 +5,9 @@
         <shape
             android:shape="rectangle">
             <corners android:radius="8dp"/>
-            <size android:height="5dp" android:width="50dp" />
+            <size android:height="5dp" android:width="70dp" />
             <solid android:color="@color/colorAccent"/>
-            <padding android:left="5dp" android:right="5dp" />
+            <padding android:left="10dp" android:right="10dp" />
         </shape>
     </item>
 
