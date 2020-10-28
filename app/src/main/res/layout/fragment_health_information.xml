@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/health_info_health_info_id" />
 
     <Spinner
-        android:id="@+id/health_info_blood_group_spinner"
+        android:id="@+id/spinnerBG"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="70dp"
         android:layout_height="40dp"
@@ -48,11 +48,11 @@
         android:text="@string/genotype"
         android:textStyle="bold"
         android:textSize="@dimen/eighteen_sp"
-        app:layout_constraintStart_toEndOf="@+id/health_info_blood_group_spinner"
+        app:layout_constraintStart_toEndOf="@+id/spinnerBG"
         app:layout_constraintTop_toTopOf="@+id/health_info_blood_group" />
 
     <Spinner
-        android:id="@+id/health_info_genotype_spinner"
+        android:id="@+id/spinnerGenotype"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="70dp"
         android:layout_height="40dp"
@@ -60,7 +60,7 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/health_info_genotype"
-        app:layout_constraintTop_toTopOf="@+id/health_info_blood_group_spinner" />
+        app:layout_constraintTop_toTopOf="@+id/spinnerBG" />
 
     <TextView
         android:id="@+id/health_info_bp"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/health_info_blood_group" />
 
     <EditText
-        android:id="@+id/health_info_bp_1"
+        android:id="@+id/editTextBPSystolic"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="100dp"
         android:layout_height="40dp"
@@ -93,11 +93,11 @@
         android:text="@string/forward_slash"
         android:textStyle="bold"
         android:textSize="@dimen/eighteen_sp"
-        app:layout_constraintStart_toEndOf="@+id/health_info_bp_1"
+        app:layout_constraintStart_toEndOf="@+id/editTextBPSystolic"
         app:layout_constraintTop_toTopOf="@+id/health_info_bp" />
 
     <EditText
-        android:id="@+id/health_info_bp_2"
+        android:id="@+id/editTextBPDiastolic"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="100dp"
         android:layout_height="40dp"
@@ -107,7 +107,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/health_info_bp_slash"
-        app:layout_constraintTop_toTopOf="@+id/health_info_bp_1" />
+        app:layout_constraintTop_toTopOf="@+id/editTextBPSystolic" />
 
     <TextView
         android:id="@+id/health_info_weight"
@@ -121,7 +121,7 @@
         app:layout_constraintTop_toBottomOf="@+id/health_info_bp" />
 
     <EditText
-        android:id="@+id/health_info_weight_edit"
+        android:id="@+id/editTextWeight"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="80dp"
         android:layout_height="40dp"
@@ -140,11 +140,11 @@
         android:text="@string/height"
         android:textStyle="bold"
         android:textSize="@dimen/eighteen_sp"
-        app:layout_constraintStart_toEndOf="@+id/health_info_weight_edit"
+        app:layout_constraintStart_toEndOf="@+id/editTextWeight"
         app:layout_constraintTop_toTopOf="@+id/health_info_weight" />
 
     <EditText
-        android:id="@+id/health_info_height_edit"
+        android:id="@+id/editTextHeight"
         style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="80dp"
         android:layout_height="40dp"
@@ -154,10 +154,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/health_info_height"
-        app:layout_constraintTop_toTopOf="@+id/health_info_weight_edit" />
+        app:layout_constraintTop_toTopOf="@+id/editTextWeight" />
 
     <Button
-        android:id="@+id/health_info_button"
+        android:id="@+id/buttonHealthInfoCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -173,9 +173,9 @@
         android:layout_height="wrap_content"
         android:text="kg"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/health_info_weight_edit"
-        app:layout_constraintEnd_toEndOf="@+id/health_info_weight_edit"
-        app:layout_constraintTop_toTopOf="@+id/health_info_weight_edit" />
+        app:layout_constraintBottom_toBottomOf="@+id/editTextWeight"
+        app:layout_constraintEnd_toEndOf="@+id/editTextWeight"
+        app:layout_constraintTop_toTopOf="@+id/editTextWeight" />
 
     <TextView
         android:id="@+id/health_info_cm"
@@ -183,8 +183,8 @@
         android:layout_height="wrap_content"
         android:text="cm"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/health_info_height_edit"
-        app:layout_constraintEnd_toEndOf="@+id/health_info_height_edit"
-        app:layout_constraintTop_toTopOf="@+id/health_info_height_edit" />
+        app:layout_constraintBottom_toBottomOf="@+id/editTextHeight"
+        app:layout_constraintEnd_toEndOf="@+id/editTextHeight"
+        app:layout_constraintTop_toTopOf="@+id/editTextHeight" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

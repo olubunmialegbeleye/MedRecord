@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextName"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupGender"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -87,10 +87,10 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate2">
+        app:layout_constraintTop_toBottomOf="@+id/editTextDOB">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButtonMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/male"
@@ -98,7 +98,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/female"
@@ -107,7 +107,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextOccupation"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -118,7 +118,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupGender" />
 
     <TextView
         android:id="@+id/textView15"
@@ -132,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroupMaritalStatus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -141,10 +141,10 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
+        app:layout_constraintTop_toBottomOf="@+id/editTextOccupation">
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButtonSingle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/single"
@@ -152,7 +152,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radioButtonMarried"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/married"
@@ -160,7 +160,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/radioButtonDivorced"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/divorced"
@@ -169,7 +169,8 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/editTextDOB"
+        android:clickable="true"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -180,10 +181,12 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        android:focusable="false" />
+    
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonPersonalInfoNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -191,5 +194,5 @@
         android:text="@string/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupMaritalStatus" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -61,7 +61,7 @@
         android:text="@string/state"
         android:textSize="@dimen/eighteen_sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName5"
+        app:layout_constraintStart_toEndOf="@+id/editTextCity"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/editTextCity"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="100dp"
         android:layout_height="40dp"
@@ -85,10 +85,10 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/editTextState"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -99,7 +99,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -116,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/editTextAddress"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -131,7 +131,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextEmail"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="40dp"
@@ -142,10 +142,10 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCity" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonContactInfoNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -153,5 +153,5 @@
         android:text="@string/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
