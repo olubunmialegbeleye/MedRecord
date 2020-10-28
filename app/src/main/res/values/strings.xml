@@ -73,5 +73,17 @@
     <string name="house_address">23, Federal Teaching Hospital road, Apata</string>
     <string name="ibadan_city">Ibadan</string>
     <string name="lagos_state">Lagos</string>
+    <string-array name="BG_array">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+    <string-array name="genotype_array">
+        <item>AA</item>
+        <item>AS</item>
+        <item>AC</item>
+        <item>SS</item>
+    </string-array>
 
 </resources>
