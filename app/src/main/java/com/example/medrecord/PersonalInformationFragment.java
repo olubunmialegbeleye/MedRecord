@@ -91,7 +91,7 @@ public class PersonalInformationFragment extends Fragment{
     public void logData(){
         System.out.println("DEBUG: " + editTextName.getText().toString());
         toNewRecordActivity.setName(editTextName.getText().toString());
-        toNewRecordActivity.setDOB(LocalDate.parse(editTextDOB.getText()));  //DEBUG
+        toNewRecordActivity.setDOB(LocalDate.parse(editTextDOB.getText().toString()));  //DEBUG
         toNewRecordActivity.setOccupation(editTextOccupation.getText().toString());
         //Get the status of GENDER radiogroup
         switch (radioGroupGender.getCheckedRadioButtonId()){
