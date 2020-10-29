@@ -15,6 +15,8 @@ public class Patient {
     final LocalDate PATIENT_DOB;
     enum GENDER { MALE, FEMALE}
     enum MARITAL_STATUS {SINGLE, MARRIED, DIVORCED}
+    enum BG {A, B, AB, O}
+    enum GENOTYPE {AA, AS, AC, SS}
 
     public Patient(String patient_name, String patient_occupation, String patient_phone, String patient_address, String patient_city, String patient_state, String patient_email, LocalDate patient_dob, GENDER gender, MARITAL_STATUS marital_status) {
         PATIENT_NAME = patient_name;
