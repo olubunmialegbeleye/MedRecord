@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">MedRecord</string>
     <string name="title_activity_main">MedRecord</string>
-    <string name="extended_fab_content_description">Extended Fab Content Description</string>
+    <string name="extended_fab_content_description">Extended Floating Action Button</string>
     <string name="create">CREATE</string>
     <string name="title_activity_record_manager">Patients</string>
-    <string name="fab_content_description">Fab Content Description</string>
+    <string name="fab_content_description">Floating Action Button</string>
     <string name="title_activity_navigation">Patients</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -73,6 +73,17 @@
     <string name="house_address">23, Federal Teaching Hospital road, Apata</string>
     <string name="ibadan_city">Ibadan</string>
     <string name="lagos_state">Lagos</string>
+    <string name="blood_group2">Blood Group</string>
+    <string name="genotype2">Genotype</string>
+    <string name="blood_group_value">O</string>
+    <string name="genotype_value">AA</string>
+    <string name="weight2">Weight</string>
+    <string name="weight_value">70kg</string>
+    <string name="height2">Height</string>
+    <string name="height_value">185cm</string>
+    <string name="bp_value">120/80</string>
+    <string name="blood_pressure2">Blood Pressure</string>
+    <string name="edit">EDIT</string>
     <string-array name="BG_array">
         <item>A</item>
         <item>B</item>
