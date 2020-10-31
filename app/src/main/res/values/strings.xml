@@ -1,3 +1,100 @@
 <resources>
     <string name="app_name">MedRecord</string>
+    <string name="title_activity_main">MedRecord</string>
+    <string name="extended_fab_content_description">Extended Floating Action Button</string>
+    <string name="create">CREATE</string>
+    <string name="title_activity_record_manager">Patients</string>
+    <string name="fab_content_description">Floating Action Button</string>
+    <string name="title_activity_navigation">Patients</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="john_doe">John Doe</string>
+    <string name="age">Age:</string>
+    <string name="sex">Sex:</string>
+    <string name="bp">BP:</string>
+    <string name="search">Search</string>
+    <string name="it_seems_you_do_not_have_any_record">It seems you do not have any record.</string>
+    <string name="to_begin_click_the_add_button_to_add_a_patient_s_record">To begin, click the Create button to add a patient\'s record</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="to_begin_create_an_administrator_account">To begin, create an Administrator Account</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="title_activity_new_record">New Record</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_record">New Record</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="name">Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="occupation">Occupation</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="health_information">Health Information</string>
+    <string name="blood_group">Blood Group:</string>
+    <string name="genotype">Genotype:</string>
+    <string name="blood_pressure">Blood Pressure:</string>
+    <string name="forward_slash">/</string>
+    <string name="weight">Weight:</string>
+    <string name="height">Height:</string>
+    <string name="view_patient_record">View Patient Record</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="email_address">Email Address</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="single">Single</string>
+    <string name="married">Married</string>
+    <string name="divorced">Divorced</string>
+    <string name="birth_date_dd_mm_yyyy">99/99/9999</string>
+    <string name="fisherman">Fisherman</string>
+    <string name="telephone_number">99999999999</string>
+    <string name="com_email_address">johndoejohndoe@gmail.com</string>
+    <string name="house_address">23, Federal Teaching Hospital road, Apata</string>
+    <string name="ibadan_city">Ibadan</string>
+    <string name="lagos_state">Lagos</string>
+    <string name="blood_group2">Blood Group</string>
+    <string name="genotype2">Genotype</string>
+    <string name="blood_group_value">O</string>
+    <string name="genotype_value">AA</string>
+    <string name="weight2">Weight</string>
+    <string name="weight_value">70kg</string>
+    <string name="height2">Height</string>
+    <string name="height_value">185cm</string>
+    <string name="bp_value">120/80</string>
+    <string name="blood_pressure2">Blood Pressure</string>
+    <string name="edit">EDIT</string>
+    <string-array name="BG_array">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+    <string-array name="genotype_array">
+        <item>AA</item>
+        <item>AS</item>
+        <item>AC</item>
+        <item>SS</item>
+    </string-array>
+
 </resources>
