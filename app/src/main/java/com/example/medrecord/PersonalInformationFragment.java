@@ -59,7 +59,7 @@ public class PersonalInformationFragment extends Fragment{
 
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                editTextDOB.setText(year + "-" + String.format("%02d", month) + "-" + String.format("%02d", dayOfMonth));
+                editTextDOB.setText(year + "-" + String.format("%02d", month+1) + "-" + String.format("%02d", dayOfMonth));
             }
         };
         editTextDOB.setOnClickListener(new View.OnClickListener() {
