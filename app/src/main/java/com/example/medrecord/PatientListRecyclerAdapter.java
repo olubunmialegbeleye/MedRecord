@@ -1,6 +1,7 @@
 package com.example.medrecord;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +39,7 @@ public class PatientListRecyclerAdapter extends RecyclerView.Adapter<PatientList
         holder.textName.setText(patient.getPatientName());
         holder.textAge.setText(patient.getPatientAge() + "");
         holder.textGender.setText(patient.getPatientGender());
+        holder.textBP.setText(patient.getPatientBP());
         holder.currentPosition = position;
     }
 
@@ -50,18 +52,21 @@ public class PatientListRecyclerAdapter extends RecyclerView.Adapter<PatientList
         TextView textName;
         TextView textAge;
         TextView textGender;
+        TextView textBP;
         int currentPosition;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textName = (TextView) itemView.findViewById(R.id.patientName);
             textAge = (TextView) itemView.findViewById(R.id.age_value);
             textGender = (TextView) itemView.findViewById(R.id.sex_value);
+            textBP = (TextView) itemView.findViewById(R.id.bp_value);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    /*
-                    Intent patientDetailIntent = new Intent(context, PatientDetailsIntent);
-                     */
+
+                    Intent patientDetailsIntent = new Intent(context, ViewRecordActivity.class);
+                    patientDetailsIntent.putExtra("patient object", patientList.get(currentPosition));
+                    context.startActivity(patientDetailsIntent);
                 }
             });
         }

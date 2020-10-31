@@ -34,6 +34,7 @@ public class SignUpActivity extends AppCompatActivity {
                     Ed.putString("password", passwordText);
                     Ed.commit();
                     startActivity(new Intent(SignUpActivity.this, EmptyRecordActivity.class));
+                    finish();
                 }
                 else{
                     //snackbar: the passwords do not match

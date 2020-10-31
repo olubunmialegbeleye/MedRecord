@@ -3,11 +3,11 @@
     <item
         android:gravity="center_vertical|fill_horizontal">
         <shape
-            android:shape="rectangle">
+            android:shape="oval">
             <corners android:radius="8dp"/>
-            <size android:height="5dp" android:width="70dp" />
+            <size android:height="8dp" android:width="8dp" />
             <solid android:color="@color/colorPrimaryDark"/>
-            <padding android:left="10dp" android:right="10dp" />
+            <padding android:left="50dp" android:right="50dp" />
         </shape>
     </item>
 

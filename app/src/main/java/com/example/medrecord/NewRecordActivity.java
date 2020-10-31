@@ -34,6 +34,27 @@ public class NewRecordActivity extends AppCompatActivity implements PatientInfoI
     private void initComponents(){
         tabLayout = (TabLayout) findViewById(R.id.tabs_bottom);
         viewPager = (ViewPager) findViewById(R.id.viewpager_container);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position){
+                    case 1:
+                        PagerAdapter.getItem(0).onPause();
+                    case 2:
+                        PagerAdapter.getItem(1).onPause();
+                }
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void setUpViewPager(){
@@ -128,7 +149,13 @@ public class NewRecordActivity extends AppCompatActivity implements PatientInfoI
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void createPatientinDB() {
-        Patient p = new Patient((String) holder.get("name"), (String) holder.get("occupation"), (String) holder.get("phone"), (String) holder.get("address"), (String) holder.get("city"), (String) holder.get("state"), (String) holder.get("email"), (LocalDate) holder.get("DOB"), (Patient.GENDER) holder.get("gender"), (Patient.MARITAL_STATUS) holder.get("marital_status"));
+        Patient p = new Patient((String) holder.get("name"), (String) holder.get("occupation"),
+                (String) holder.get("phone"), (String) holder.get("address"),
+                (String) holder.get("city"), (String) holder.get("state"),
+                (String) holder.get("email"), (LocalDate) holder.get("DOB"),
+                (Patient.GENDER) holder.get("gender"), (Patient.MARITAL_STATUS) holder.get("marital_status"),
+                (String) holder.get("height"), (String) holder.get("weight"), (String) holder.get("systolic"),
+                (String) holder.get("diastolic"), (Patient.BG) holder.get("BG"), (Patient.GENOTYPE) holder.get("genotype"));
         dbHelper.createPatient(p);
     }
 }

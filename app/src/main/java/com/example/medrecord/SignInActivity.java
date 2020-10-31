@@ -41,6 +41,7 @@ public class SignInActivity extends AppCompatActivity {
                     else {
                         startActivity(new Intent(SignInActivity.this, RecordManagerActivity.class));
                     }
+                    finish();
                 }
                 else{
 

@@ -33,9 +33,9 @@
     <Spinner
         android:id="@+id/spinnerBG"
         style="@style/AppTheme.RoundedCornerMaterialButton"
-        android:layout_width="70dp"
+        android:layout_width="50dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="42dp"
         app:layout_constraintStart_toEndOf="@+id/health_info_blood_group"
         app:layout_constraintTop_toBottomOf="@+id/health_info_health_info_id" />
@@ -54,9 +54,9 @@
     <Spinner
         android:id="@+id/spinnerGenotype"
         style="@style/AppTheme.RoundedCornerMaterialButton"
-        android:layout_width="70dp"
+        android:layout_width="50dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="0dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/health_info_genotype"
@@ -76,12 +76,12 @@
     <EditText
         android:id="@+id/editTextBPSystolic"
         style="@style/AppTheme.RoundedCornerMaterialButton"
-        android:layout_width="100dp"
+        android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/health_info_bp"
         app:layout_constraintTop_toBottomOf="@+id/health_info_blood_group" />
 
@@ -99,13 +99,12 @@
     <EditText
         android:id="@+id/editTextBPDiastolic"
         style="@style/AppTheme.RoundedCornerMaterialButton"
-        android:layout_width="100dp"
+        android:inputType="number"
+        android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="0dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/health_info_bp_slash"
         app:layout_constraintTop_toTopOf="@+id/editTextBPSystolic" />
 
@@ -128,7 +127,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/health_info_weight"
         app:layout_constraintTop_toBottomOf="@+id/health_info_bp" />
 
@@ -151,7 +150,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/health_info_height"
         app:layout_constraintTop_toTopOf="@+id/editTextWeight" />

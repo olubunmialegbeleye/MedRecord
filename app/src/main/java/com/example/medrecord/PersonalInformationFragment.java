@@ -59,7 +59,7 @@ public class PersonalInformationFragment extends Fragment{
 
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                editTextDOB.setText(year + "-" + month + "-" + dayOfMonth);
+                editTextDOB.setText(year + "-" + String.format("%02d", month) + "-" + String.format("%02d", dayOfMonth));
             }
         };
         editTextDOB.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +89,6 @@ public class PersonalInformationFragment extends Fragment{
     }
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void logData(){
-        System.out.println("DEBUG: " + editTextName.getText().toString());
         toNewRecordActivity.setName(editTextName.getText().toString());
         toNewRecordActivity.setDOB(LocalDate.parse(editTextDOB.getText().toString()));  //DEBUG
         toNewRecordActivity.setOccupation(editTextOccupation.getText().toString());

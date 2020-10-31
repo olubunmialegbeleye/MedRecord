@@ -29,6 +29,13 @@ public class DBHelper {
     public static final String COLUMN_CITY = "patient_city";
     public static final String COLUMN_STATE = "patient_state";
     public static final String COLUMN_EMAIL = "patient_email";
+    public static final String COLUMN_HEIGHT = "patient_height";
+    public static final String COLUMN_WEIGHT = "patient_weight";
+    public static final String COLUMN_BP_SYSTOLIC = "patient_bp_systolic";
+    public static final String COLUMN_BP_DIASTOLIC = "patient_bp_diastolic";
+    public static final String COLUMN_BG = "patient_bg";
+    public static final String COLUMN_GENOTYPE = "patient_genotype";
+
 
     private SQLiteDatabase db;
 
@@ -53,7 +60,13 @@ public class DBHelper {
                     COLUMN_PHONE + " TEXT NOT NULL, " +
                     COLUMN_CITY + " TEXT NOT NULL, " +
                     COLUMN_STATE + " TEXT NOT NULL, " +
-                    COLUMN_EMAIL + " TEXT NOT NULL PRIMARY KEY " +
+                    COLUMN_EMAIL + " TEXT NOT NULL PRIMARY KEY, " +
+                    COLUMN_HEIGHT + " TEXT NOT NULL, " +
+                    COLUMN_WEIGHT + " TEXT NOT NULL, " +
+                    COLUMN_BP_SYSTOLIC + " TEXT NOT NULL, " +
+                    COLUMN_BP_DIASTOLIC + " TEXT NOT NULL, " +
+                    COLUMN_BG + " TEXT NOT NULL, " +
+                    COLUMN_GENOTYPE + " TEXT NOT NULL" +
                     " )"
             );
         }
@@ -88,6 +101,12 @@ public class DBHelper {
         cv.put(COLUMN_CITY, patient.PATIENT_CITY);
         cv.put(COLUMN_STATE, patient.PATIENT_STATE);
         cv.put(COLUMN_EMAIL, patient.PATIENT_EMAIL);
+        cv.put(COLUMN_HEIGHT, patient.PATIENT_HEIGHT);
+        cv.put(COLUMN_WEIGHT, patient.PATIENT_WEIGHT);
+        cv.put(COLUMN_BP_SYSTOLIC, patient.PATIENT_BP_SYSTOLIC);
+        cv.put(COLUMN_BP_DIASTOLIC, patient.PATIENT_BP_DIASTOLIC);
+        cv.put(COLUMN_BG, patient.PATIENT_BG);
+        cv.put(COLUMN_GENOTYPE, patient.PATIENT_GENOTYPE);
         this.open();
         long result_code = db.insert(TABLE_NAME, null, cv);
         this.close();
@@ -96,9 +115,8 @@ public class DBHelper {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public List<Patient> getPatientList(){
         List<Patient> patientList = new ArrayList<>();
-        String[] columns = new String[] {COLUMN_NAME, COLUMN_DOB, COLUMN_GENDER, COLUMN_OCCUPATION, COLUMN_MARITAL_STATUS, COLUMN_ADDRESS, COLUMN_PHONE, COLUMN_CITY, COLUMN_STATE, COLUMN_EMAIL};
         this.open();
-        Cursor c = db.query(TABLE_NAME, columns, null, null, null, null, null);
+        Cursor c = db.query(TABLE_NAME, null, null, null, null, null, null);
         int iName = c.getColumnIndex(COLUMN_NAME);
         int iDOB = c.getColumnIndex(COLUMN_DOB);
         int iGender = c.getColumnIndex(COLUMN_GENDER);
@@ -109,6 +127,13 @@ public class DBHelper {
         int iCity = c.getColumnIndex(COLUMN_CITY);
         int iState = c.getColumnIndex(COLUMN_STATE);
         int iEmail = c.getColumnIndex(COLUMN_EMAIL);
+        int iHeight = c.getColumnIndex(COLUMN_HEIGHT);
+        int iWeight = c.getColumnIndex(COLUMN_WEIGHT);
+        int iBpSystolic = c.getColumnIndex(COLUMN_BP_SYSTOLIC);
+        int iBpDiastolic = c.getColumnIndex(COLUMN_BP_DIASTOLIC);
+        int iBG = c.getColumnIndex(COLUMN_BG);
+        int iGenotype = c.getColumnIndex(COLUMN_GENOTYPE);
+
         for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
             String pName = c.getString(iName);
             String pOccupation = c.getString(iOccupation);
@@ -120,7 +145,15 @@ public class DBHelper {
             LocalDate pDOB = LocalDate.parse(c.getString(iDOB));
             Patient.GENDER pGender = Patient.GENDER.valueOf(c.getString(iGender));
             Patient.MARITAL_STATUS pMaritalStatus = Patient.MARITAL_STATUS.valueOf(c.getString(iMaritalStatus));
-            Patient patient = new Patient(pName, pOccupation, pPhone, pAddress, pCity, pState, pEmail, pDOB, pGender, pMaritalStatus);
+            String pHeight = c.getString(iHeight);
+            String pWeight = c.getString(iWeight);
+            String pBPSystolic = c.getString(iBpSystolic);
+            String pBPDiastolic = c.getString(iBpDiastolic);
+            Patient.BG pBG = Patient.BG.valueOf(c.getString(iBG));
+            Patient.GENOTYPE pGenotype = Patient.GENOTYPE.valueOf(c.getString(iGenotype));
+            Patient patient = new Patient(pName, pOccupation, pPhone, pAddress, pCity, pState, pEmail,
+                    pDOB, pGender, pMaritalStatus,
+                    pHeight, pWeight, pBPSystolic, pBPDiastolic, pBG, pGenotype);
             patientList.add(patient);
         }
         this.close();
@@ -143,6 +176,12 @@ public class DBHelper {
         int iCity = c.getColumnIndex(COLUMN_CITY);
         int iState = c.getColumnIndex(COLUMN_STATE);
         int iEmail = c.getColumnIndex(COLUMN_EMAIL);
+        int iHeight = c.getColumnIndex(COLUMN_HEIGHT);
+        int iWeight = c.getColumnIndex(COLUMN_WEIGHT);
+        int iBpSystolic = c.getColumnIndex(COLUMN_BP_SYSTOLIC);
+        int iBpDiastolic = c.getColumnIndex(COLUMN_BP_DIASTOLIC);
+        int iBG = c.getColumnIndex(COLUMN_BG);
+        int iGenotype = c.getColumnIndex(COLUMN_GENOTYPE);
         if (c != null){
             c.moveToFirst();
             String pName = c.getString(iName);
@@ -155,7 +194,15 @@ public class DBHelper {
             LocalDate pDOB = LocalDate.parse(c.getString(iDOB));
             Patient.GENDER pGender = Patient.GENDER.valueOf(c.getString(iGender));
             Patient.MARITAL_STATUS pMaritalStatus = Patient.MARITAL_STATUS.valueOf(c.getString(iMaritalStatus));
-            Patient patient = new Patient(pName, pOccupation, pPhone, pAddress, pCity, pState, pEmail, pDOB, pGender, pMaritalStatus);
+            String pHeight = c.getString(iHeight);
+            String pWeight = c.getString(iWeight);
+            String pBPSystolic = c.getString(iBpSystolic);
+            String pBPDiastolic = c.getString(iBpDiastolic);
+            Patient.BG pBG = Patient.BG.valueOf(c.getString(iBG));
+            Patient.GENOTYPE pGenotype = Patient.GENOTYPE.valueOf(c.getString(iGenotype));
+            Patient patient = new Patient(pName, pOccupation, pPhone, pAddress, pCity, pState, pEmail,
+                    pDOB, pGender, pMaritalStatus,
+                    pHeight, pWeight, pBPSystolic, pBPDiastolic, pBG, pGenotype);
             return patient;
         }
         else

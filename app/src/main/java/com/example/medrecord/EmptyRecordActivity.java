@@ -24,6 +24,7 @@ public class EmptyRecordActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(EmptyRecordActivity.this, NewRecordActivity.class));
+                finish();
             }
         });
     }

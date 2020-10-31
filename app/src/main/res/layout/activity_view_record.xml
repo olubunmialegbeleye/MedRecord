@@ -33,7 +33,7 @@
         android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/view_john_doe"
+        android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -52,8 +52,8 @@
         android:text="@string/personal_information"
         android:textSize="@dimen/twenty_sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/view_john_doe"
-        app:layout_constraintTop_toBottomOf="@+id/view_john_doe" />
+        app:layout_constraintStart_toStartOf="@+id/textViewName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <TextView
         android:id="@+id/view_dob"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="@+id/view_dob" />
 
     <TextView
-        android:id="@+id/view_dd_mm_yyyy"
+        android:id="@+id/textViewDOB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view_dob" />
 
     <TextView
-        android:id="@+id/view_fisherman"
+        android:id="@+id/textViewOccupation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -107,7 +107,7 @@
         android:textSize="@dimen/eighteen_sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view_dob"
-        app:layout_constraintTop_toBottomOf="@+id/view_dd_mm_yyyy" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDOB" />
 
     <TextView
         android:id="@+id/view_marital_status"
@@ -120,7 +120,7 @@
         app:layout_constraintTop_toTopOf="@+id/view_gender" />
 
     <TextView
-        android:id="@+id/view_male"
+        android:id="@+id/textViewGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -130,7 +130,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view_gender" />
 
     <TextView
-        android:id="@+id/view_married"
+        android:id="@+id/textViewMaritalStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -147,7 +147,7 @@
         android:background="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_married" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewMaritalStatus" />
 
     <TextView
         android:id="@+id/view_contact_info"
@@ -161,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view_view_id" />
 
     <TextView
-        android:id="@+id/view_phone"
+        android:id="@+id/textViewPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -173,14 +173,14 @@
         app:layout_constraintTop_toBottomOf="@+id/view_contact_info" />
 
     <TextView
-        android:id="@+id/view_email_address"
+        android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email_address"
         android:textSize="@dimen/eighteen_sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view_occupation"
-        app:layout_constraintTop_toTopOf="@+id/view_phone" />
+        app:layout_constraintTop_toTopOf="@+id/textViewPhone" />
 
     <TextView
         android:id="@+id/view_telephone_number"
@@ -189,8 +189,8 @@
         android:layout_marginTop="8dp"
         android:text="@string/telephone_number"
         android:textSize="@dimen/sixteen_sp"
-        app:layout_constraintStart_toStartOf="@+id/view_phone"
-        app:layout_constraintTop_toBottomOf="@+id/view_phone" />
+        app:layout_constraintStart_toStartOf="@+id/textViewPhone"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhone" />
 
     <TextView
         android:id="@+id/view_com_email_address"
@@ -199,8 +199,8 @@
         android:layout_marginTop="8dp"
         android:text="@string/com_email_address"
         android:textSize="@dimen/sixteen_sp"
-        app:layout_constraintStart_toStartOf="@+id/view_email_address"
-        app:layout_constraintTop_toBottomOf="@+id/view_email_address" />
+        app:layout_constraintStart_toStartOf="@+id/textViewEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
     <TextView
         android:id="@+id/view_address"
@@ -251,7 +251,7 @@
         android:text="@string/state"
         android:textSize="@dimen/eighteen_sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/view_email_address"
+        app:layout_constraintStart_toStartOf="@+id/textViewEmail"
         app:layout_constraintTop_toTopOf="@+id/view_city" />
 
     <TextView
@@ -345,8 +345,8 @@
           android:layout_marginTop="8dp"
           android:text="@string/weight_value"
           android:textSize="@dimen/sixteen_sp"
-          app:layout_constraintStart_toStartOf="@+id/view_weight"
-          app:layout_constraintTop_toBottomOf="@+id/view_weight" />
+          app:layout_constraintStart_toStartOf="@id/view_weight"
+          app:layout_constraintTop_toBottomOf="@id/view_weight" />
 
       <TextView
           android:id="@+id/view_height"
@@ -355,8 +355,8 @@
           android:text="@string/height2"
           android:textSize="@dimen/eighteen_sp"
           android:textStyle="bold"
-          app:layout_constraintStart_toStartOf="@+id/view_genotype"
-          app:layout_constraintTop_toTopOf="@+id/view_weight" />
+          app:layout_constraintStart_toStartOf="@id/view_genotype"
+          app:layout_constraintTop_toTopOf="@id/view_weight" />
 
       <TextView
           android:id="@+id/view_height_value"
@@ -365,8 +365,8 @@
           android:layout_marginTop="8dp"
           android:text="@string/height_value"
           android:textSize="@dimen/sixteen_sp"
-          app:layout_constraintStart_toStartOf="@+id/view_height"
-          app:layout_constraintTop_toBottomOf="@+id/view_height" />
+          app:layout_constraintStart_toStartOf="@id/view_height"
+          app:layout_constraintTop_toBottomOf="@id/view_height" />
 
       <TextView
           android:id="@+id/view_bp"

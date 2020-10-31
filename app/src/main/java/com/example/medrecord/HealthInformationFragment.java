@@ -49,7 +49,8 @@ public class HealthInformationFragment extends Fragment{
                 logData();
                 toNewRecordActivity.createPatientinDB();
                 startActivity(new Intent((Activity) HealthInformationFragment.this.getHost(), RecordManagerActivity.class));
-
+                Activity parent = (Activity) HealthInformationFragment.this.getHost();
+                parent.finish();
             }
         });
         return view;
@@ -69,7 +70,7 @@ public class HealthInformationFragment extends Fragment{
 
         ArrayAdapter<CharSequence> spinnerGenotypeAdapter =ArrayAdapter.createFromResource((Activity) this.getHost(), R.array.genotype_array, android.R.layout.simple_spinner_item);
         spinnerGenotypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerBG.setAdapter(spinnerGenotypeAdapter);
+        spinnerGenotype.setAdapter(spinnerGenotypeAdapter);
     }
     public void logData(){
         toNewRecordActivity.setBP(editTextBPSystolic.getText().toString(), editTextBPDiastolic.getText().toString());
